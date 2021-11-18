@@ -1,0 +1,521 @@
+
+<!-- Home Banner -->
+<section class="section-search-3">
+    <div class="container">
+        <div class="banner-info">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="header-banner">
+                        <h2>Your sick care <br> <span class="header-highlight">Sidekick.</span></h2>
+                        <p>Tell us your symptoms<br>
+                        We will recommend your best Urgent Care, Emergency Room, or Virtual care options.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="doctor-search">
+                        <div class="doctor-form">
+                            <form action="#" class="doctor-search-form trans">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="form-custom">
+                                                <input type="text" class="form-control" value="" placeholder="Start by typing your symptoms">
+                                                <i class="far fa-sad"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <div class="form-custom">
+                                                <input type="text" class="form-control" value="" placeholder="Location">
+                                                <i class="far fa-compass"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <div class="form-custom">
+                                                <input type="text" class="form-control" value="" placeholder="Insurance">
+                                                <i class="far fa-smile"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="form-custom">
+                                                <input type="text" class="form-control" value="" placeholder="Prefered location(optional)">
+                                                <i class="far fa-smile"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a [routerLink]="'/patients/search-doctor'" class="btn banner-btn">Get Better</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Home Banner -->
+
+<!-- category select-->
+<section class="doctor-category">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="pop-box">
+                    <div class="top-section">
+                        <div class="cat-icon">
+                            <i class="fas fa-procedures"></i>
+                        </div>
+                    </div>
+                    <div class="body-section">
+                        <h3>In-Person Care</h3>
+                        <p></p>
+                        <a [routerLink]="'/patients/booking'" class="btn book-btn" tabindex="0">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pop-box">
+                    <div class="top-section two">
+                        <div class="cat-icon">
+                            <i class="fas fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="body-section">
+                        <h3>Virtual Care</h3>
+                        <p></p>
+                        <a [routerLink]="'/patients/booking'" class="btn book-btn" tabindex="0">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pop-box">
+                    <div class="top-section three">
+                        <div class="cat-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                    </div>
+                    <div class="body-section">
+                        <h3>Pharmacy</h3>
+                        <p></p>
+                        <a [routerLink]="'/patients/booking'" class="btn book-btn" tabindex="0">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /category select-->
+
+
+<!-- Book Doctors-->
+<section class="book-section">
+    <div class="container">
+       <div class="section-header-three text-center">
+                        <h2>Closest locations</h2>
+                        <p class="sub-title">Here are some of the locations near you!</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="book-best-doctors">
+                    <div class="book-header">
+                        <div class="img-overlay">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="doctors-body">
+                        <div class="inner-section">
+                            <span class="float-left">Urgent Care</span>
+                            <div class="rating text-right">
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="d-inline-block average-ratings">4</span>
+                            </div>
+                            <a [routerLink]="'/patients/doctor-profile'"><h4>Jefferson Health</h4></a>
+                            <p>Rittenhouse location</p>
+                        </div>
+                        <div class="row row-sm loc-details">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/map-plus.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Location</span>
+                                        <span class="data-info">Philadelphia</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/alarm.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Next Available</span>
+                                        <span class="data-info">TODAY</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/consult.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Traffic</span>
+                                        <span class="data-info">Google API("Low")</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/exper.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">EXPERIENCE</span>
+                                        <span class="data-info">25+ Years</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-sm align-items-center p-3">
+                            <div class="col-9">
+                                <a [routerLink]="'/patients/booking'" class="btn book-btn" tabindex="0">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="book-best-doctors">
+                    <div class="book-header">
+                        <div class="img-overlay">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="doctors-body">
+                        <div class="inner-section">
+                            <span class="float-left">Virtual Care</span>
+                            <div class="rating text-right">
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="d-inline-block average-ratings">3.5</span>
+                            </div>
+                            <a [routerLink]="'/patients/doctor-profile'"><h4>Jefferson Health</h4></a>
+                            <p>powered by Jeffconnect</p>
+                        </div>
+                        <div class="row row-sm loc-details">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/map-plus.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Location</span>
+                                        <span class="data-info">Pennsylvania</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/alarm.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Available on</span>
+                                        <span class="data-info">Now</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/consult.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Patients Served</span>
+                                        <span class="data-info">5000+ Patients</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/exper.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">EXPERIENCE</span>
+                                        <span class="data-info">25+ Years</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-sm align-items-center p-3">
+                            <div class="col-6">
+                                <a [routerLink]="'/patients/doctor-profile'" class="amt-txt" tabindex="0">$59</a>
+                            </div>
+                            <div class="col-6">
+                                <a [routerLink]="'/patients/booking'" class="btn book-btn" tabindex="0">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="book-best-doctors">
+                    <div class="book-header">
+                        <div class="img-overlay">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="doctors-body">
+                        <div class="inner-section">
+                            <span class="float-left">Emergency</span>
+                            <div class="rating text-right">
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="d-inline-block average-ratings">3.5</span>
+                            </div>
+                            <a [routerLink]="'/patients/doctor-profile'"><h4>Methodist Hospital</h4></a>
+                            <p>Center City</p>
+                        </div>
+                        <div class="row row-sm loc-details">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/map-plus.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Location</span>
+                                        <span class="data-info">Philadelphia</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/alarm.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Next Available</span>
+                                        <span class="data-info">NOW</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/consult.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Traffic</span>
+                                        <span class="data-info">Google API ("Heavy")</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/exper.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Trauma</span>
+                                        <span class="data-info">Level 1</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-sm align-items-center p-3">
+                            <div class="col-9">
+                                <a [routerLink]="'/patients/booking'" class="btn book-btn" tabindex="0">Map Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="book-best-doctors">
+                    <div class="book-header">
+                        <div class="img-overlay">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="doctors-body">
+                        <div class="inner-section">
+                            <span class="float-left">Pharmacy</span>
+                            <div class="rating text-right">
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="d-inline-block average-ratings">3.5</span>
+                            </div>
+                            <a [routerLink]="'/patients/doctor-profile'"><h4>CVS</h4></a>
+                            <p>Center City</p>
+                        </div>
+                        <div class="row row-sm loc-details">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/map-plus.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Location</span>
+                                        <span class="data-info">Philadelphia</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/alarm.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Available on</span>
+                                        <span class="data-info">Soon</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/consult.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">Traffic</span>
+                                        <span class="data-info">google API ("Medium")</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/img/shapes/exper.png" alt="" />
+                                    </a> 
+                                    <a href="javascript:void(0);">
+                                        <span class="available-info">COVID-19</span>
+                                        <span class="data-info">YES</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-sm align-items-center p-3">
+                            <div class="col-9">
+                                <a [routerLink]="'/patients/booking'" class="btn book-btn" tabindex="0">Map Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="view-all-more text-center">	
+            <a [routerLink]="'/patients/doctor-profile'" class="btn btn-primary">View More</a>
+        </div>
+    </div>
+</section>
+<!-- /Book Doctors-->
+
+<!-- Blogs -->
+<section class="latest-blog">
+    <div class="container">
+        <div class="section-header-three text-center">
+                        <h2>What patients are saying</h2>
+                    </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="blog-wrap">
+                    <div class="image-holder">
+                    </div>
+                    <div class="blog-wrap-body">
+                        <h3><a [routerLink]="'/blog-details'">Jefferson Health-Rittenhouse</a></h3>
+                        <p>Knowing where to go is one thing, but when you are not feeling well, this makes getting help so much better.</p>
+                        <div class="blog-footer">
+                            <div class="row row-sm align-items-center">
+                                <div class="col-6 text-left">
+                                    <a [routerLink]="'/blog-details'" class="read-txt" tabindex="0">Tom R.</a>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a href="javascript:void(0);" class="cal-txt" tabindex="0"><i class=""></i> Jan 03, 2021</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="blog-wrap">
+                    <div class="blog-wrap-body">
+                        <h3><a [routerLink]="'/blog-details'">Jefferson Health- Grant Ave.</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                        ut labore et..</p>
+                        <div class="blog-footer">
+                            <div class="row row-sm align-items-center">
+                                <div class="col-6 text-left">
+                                    <a [routerLink]="'/blog-details'" class="read-txt" tabindex="0">mary W. </a>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a href="javascript:void(0);" class="cal-txt" tabindex="0"><i class=""></i> Mar 13, 2021</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="blog-wrap">
+                    <div class="blog-wrap-body">
+                        <h3><a [routerLink]="'/blog-details'">Beverly Hospital</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                        ut labore et..</p>
+                        <div class="blog-footer">
+                            <div class="row row-sm align-items-center">
+                                <div class="col-6 text-left">
+                                    <a [routerLink]="'/blog-details'" class="read-txt" tabindex="0">Karen C.</a>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a href="javascript:void(0);" class="cal-txt" tabindex="0"><i class=""></i> Jan 03, 2020</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Blogs -->
+
+<!-- Doctor Section-->
+<section class="doctor-divison">
+    <div class="d-flex">
+        <div class="doc-background">
+            <h3>ARE YOU A MEDICAL PROVIDER?</h3>
+            <p>Sign up for the future of sick care support!SASasdassadadadasdsasd</p>
+            <a [routerLink]="'/patients/booking'" class="doc-bok-btn">Sign Up</a>
+        </div>
+        <div class="pat-background">
+            <h3>ARE YOU A PATIENT?</h3>
+            <p>Sign up now to protect yourself when you are in need of sick care.</p>
+            <a [routerLink]="'/patients/booking'" class="doc-bok-btn">Sign up</a>
+        </div>
+    </div>
+</section>
+<!-- /Doctor Section-->

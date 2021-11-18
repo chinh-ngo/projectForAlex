@@ -1,0 +1,8 @@
+.breadcrumb-bar {
+    background-color: #rgba(24, 96, 202, 0.9);
+    padding: 15px 0;
+    /*margin-top: 6em;*/
+}
+#daterange {
+    border: none;
+}

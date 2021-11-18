@@ -1,0 +1,66 @@
+<!-- Header -->
+            <header class="header header-trans custom">
+                <nav class="navbar navbar-expand-lg header-nav no-border">
+                    <div class="navbar-header">
+                        <a id="mobile_btn" href="javascript:void(0);">
+                            <span class="bar-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </a>
+                        <a [routerLink]="'/home'" class="navbar-brand logo">
+                            <img src="assets/img/footer-logo.png" class="img-fluid" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="main-menu-wrapper">
+                        <div class="menu-header">
+                            <a [routerLink]="'/home'" class="menu-logo">
+                                <img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+                            </a>
+                            <a id="menu_close" class="menu-close" href="javascript:void(0);">
+                                <i class="fas fa-times"></i>
+                            </a>
+                        </div>
+                        <ul class="main-nav white-font">
+                            <li class="has-submenu active">
+                                <a href="">Coronavirus <i class=""></i></a>
+                            </li>   
+                            <li class="has-submenu">
+                                <a href="">About Us <i class=""></i></a>
+                                
+                            </li>
+                            <li class="has-submenu">
+                                <a href="">News <i class=""></i></a>
+                                
+                            </li>
+                            <li class="has-submenu">
+                                <a href="">Pages <i class=""></i></a>
+                                
+                            </li>
+                            <li class="has-submenu">
+                                <a href="">News <i class="fas fa-chevron-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a [routerLink]="'/blog'">Blog List</a></li>
+                                    <li><a [routerLink]="'/blog-grid'">Facebook</a></li>
+                                    <li><a [routerLink]="'/blog-details'">Twitter</a></li>
+                                    <li><a [routerLink]="'/blog-details'">Instagram</a></li>
+                                </ul>
+                            </li>
+                            <li> <a [routerLink]="'/admin/dashboard'">Contact Us</a></li>
+                            <li class="login-link">
+                                <a [routerLink]="'/login-page'">Login / Signup</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="nav header-navbar-rht right-menu">
+                        <li class="nav-item">
+                            <a class="nav-link header-login white-bg" [routerLink]="'/login-page'"><i class="fas fa-user-circle mr-2"></i>login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link header-login" [routerLink]="'/login-page'"><i class="fas fa-lock mr-2"></i>Sign up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- /Header -->
