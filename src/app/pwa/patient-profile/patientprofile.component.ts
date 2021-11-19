@@ -20,4 +20,14 @@ export class PatientProfileComponent implements OnInit,OnDestroy {
 
   ngOnDestroy() {
   }
+
+  showSidebar(event:any){
+    document.getElementById("sidebar-menu").style.position = "absolute";
+    document.getElementById("sidebar-menu").style.left = "0px";
+  }
+  closeSidebar(event:any){
+    document.getElementById("sidebar-menu").style.position = "absolute";
+    document.getElementById("sidebar-menu").style.left = "-293px";
+
+  }
 }

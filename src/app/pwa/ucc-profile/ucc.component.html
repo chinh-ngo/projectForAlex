@@ -1,600 +1,601 @@
-<div class="main-wrapper">
 
-    <div class="side-menu" id="sidebar-menu">
-        <div class="close-btn"><span class="material-icons">close</span></div>
-        <ul>
-            <li>
-                <a class="" href="index.html">
-                    <span class="material-icons">Home</span>
-                    Home
-                </a>
-            </li>
-            <li>
-                <a class="" href="appointments.html">
-                    <span class="material-icons">date_range</span>
-                    Services
-                </a>
-            </li>
-            <li>
-                <a class="" href="patients-list.html">
-                    <span class="material-icons">person</span>
-                    About us
-                </a>
-            </li>
-            <li>
-                <a class="" href="schedule-timings.html">
-                    <span class="material-icons">access_time</span>
-                    Contact us
-                </a>
-            </li>
-            <li>
-                <a class="" href="invoices.html">
-                    <span class="material-icons">insert_drive_file</span>
-                    News
-                </a>
-            </li>
-            <li>
-                <a class="" href="pages.html">
-                    <span class="material-icons">pages</span>
-                    COVID-19 Resources
-                </a>
-            </li>
-            <li>
-                <a class="" href="pages.html">
-                    <span class="material-icons">pages</span>
-                    Create Account
-                </a>
-            </li>
-        </ul>
-        <a class="sidebar-logout" href="login.html"><span><img src="assets/pwa/assets/images/open-account-logout.svg" alt=""></span>Login</a>
-        <a class="sidebar-logout" href="login.html"><span><img src="assets/pwa/assets/images/open-account-logout.svg" alt=""></span>Logout</a>
-    </div>
+    <div class="main-wrapper">
 
-    <div class="navbar two-action no-hairline">
-        <div class="navbar-inner d-flex align-items-center">
-            <div class="left">
-                <a href="#" class="link icon-only">
-                    <i class="custom-hamburger">
-                        <span><b></b></span>
-                    </i>
-                </a>
-            </div>
-            <div class="sliding custom-title">Quick'rCare</div>
-            <div class="right d-flex">
-                <a href="notifications.html" class="link icon-only"><i class="material-icons">notifications</i></a>
-                <a href="#" data-toggle="dropdown" aria-expanded="true" class="link"><i class="material-icons">more_vert</i></a>
-                <div class="dropdown-menu dropdown-menu-right header_drop_icon">
-                    <a href="https://quickrcare.com/privacy" class="dropdown-item">Privacy</a>
-                    <a href="#" class="dropdown-item">Site settings</a>
-                    <a href="tel:911" class="dropdown-item">Call 911</a>
+    	<div class="side-menu" id="sidebar-menu">
+        	<div class="close-btn" (click) = closeSidebar($event)><span class="material-icons">close</span></div>
+            <ul>
+                <li>
+                    <a class="" href="index.html">
+                    	<span class="material-icons">Home</span>
+						Home
+					</a>
+                </li>
+                <li>
+                	<a class="" href="appointments.html">
+                		<span class="material-icons">date_range</span>
+                		Services
+                	</a>
+                </li>
+                <li>
+                    <a class="" href="patients-list.html">
+                    	<span class="material-icons">person</span>
+						About us
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="schedule-timings.html">
+                    	<span class="material-icons">access_time</span>
+						Contact us
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="invoices.html">
+                    	<span class="material-icons">insert_drive_file</span>
+						News
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="pages.html">
+                    	<span class="material-icons">pages</span>
+						COVID-19 Resources
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="pages.html">
+                    	<span class="material-icons">pages</span>
+						Create Account
+                    </a>
+                </li>
+            </ul>
+            <a class="sidebar-logout" href="login.html"><span><img src="assets/pwa/assets/images/open-account-logout.svg" alt=""></span>Login</a>
+            <a class="sidebar-logout" href="login.html"><span><img src="assets/pwa/assets/images/open-account-logout.svg" alt=""></span>Logout</a>
+        </div>
+
+        <div class="navbar two-action no-hairline">
+            <div class="navbar-inner d-flex align-items-center">
+                <div class="left">
+                    <a (click) = showSidebar($event) class="link icon-only">
+                    	<i class="custom-hamburger">
+                    		<span><b></b></span>
+                    	</i>
+                    </a>
+                </div>
+                <div class="sliding custom-title">Quick'rCare</div>
+                <div class="right d-flex">
+                    <a href="notifications.html" class="link icon-only"><i class="material-icons">notifications</i></a>
+                    <a href="#" data-toggle="dropdown" aria-expanded="true" class="link"><i class="material-icons">more_vert</i></a>
+                    <div class="dropdown-menu dropdown-menu-right header_drop_icon">
+                    	<a href="https://quickrcare.com/privacy" class="dropdown-item">Privacy</a>
+                    	<a href="#" class="dropdown-item">Site settings</a>
+                    	<a href="tel:911" class="dropdown-item">Call 911</a>
+                	</div>
                 </div>
             </div>
         </div>
+	
+	    <div class="page-content pt-0">
+
+        	<!-- Doctor Profile -->
+        	<div class="doctor-profile-tab">
+        		<div class="container">
+				 	<div class="tab-col">
+					 	<ul class="nav nav-tabs">
+						    <li><a href="#OverView" data-toggle="tab" class="active">Overview</a></li>  
+						    <li><a href="#virtual" data-toggle="tab">Virtual care</a></li>
+						    <li><a href="#Reviews" data-toggle="tab">Reviews</a></li>
+						    <li><a href="#Hours" data-toggle="tab">Hours</a></li>
+					  	</ul>
+				  	</div>
+
+				  	<div class="tab-content">
+					    <div class="tab-pane active" id="OverView">
+						    <div class="panel panel-default">
+						        <div id="collapseOne" class="panel-collapse collapse in">
+						          	<div class="panel-body">
+						          		<div class="tab-widget">
+									      	<div class="left-icon-col">
+									      		<span><img src="assets/pwa/assets/images/i-icon.svg" alt="i"></span>
+									      	</div>
+									          
+									        <div class="right-content-col">
+									        	<div class="doctor-widget">
+													<div class="doc-info-left">
+														<div class="doctor-img">
+															<a href="doctor-profile.html" class="doctor-img-profile">
+																<img src="assets/pwa/assets/images/doctors/doctor-thumb-02.jpg" class="img-fluid img-circle" alt="User Image">
+															</a>
+														</div>
+														<div class="doc-info-cont">
+															<h4 class="doc-name"><a href="doctor-profile.html">Jefferson Health</a></h4>
+															<h5 class="doc-department">
+																<span class="speciality-img"><img src="assets/pwa/assets/images/specialities/specialities-03.png" class="img-fluid" alt="Speciality"></span> Urgent Care
+															</h5> 
+															<a class="sidebar-logout" href="https://integration.quickrcare.com/booking/eb6c5625c8af48b28919bc4e36d9bb4c"
+															><span><img src="assets/pwa/assets/images/open-account-logout.svg" alt=""></span>Book Now
+															</a>
+														</div>
+													</div>
+													<div class="doc-info-right">
+														<div class="doc-info">
+															<span class="doc-experince">Closed</span>
+															<div class="clinic-details mb-0">
+																<div class="rating">
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star"></i>
+															<span class="d-inline-block average-rating">(16592)</span>
+														    </div>
+															<ul>
+																<li>
+																	<a href="assets/pwa/assets/images/features/feature-01.jpg" data-fancybox="images">
+																		<img src="assets/pwa/assets/images/features/feature-01.jpg" alt="Feature Image">
+																	</a>
+																</li>
+																<li>
+																	<a href="assets/pwa/assets/images/features/feature-02.jpg" data-fancybox="images">
+																		<img src="assets/pwa/assets/images/features/feature-02.jpg" alt="Feature Image">
+																	</a>
+																</li>
+																<li>
+																	<a href="assets/pwa/assets/images/features/feature-03.jpg" data-fancybox="images">
+																		<img src="assets/pwa/assets/images/features/feature-03.jpg" alt="Feature Image">
+																	</a>
+																</li>
+																<li>
+																	<a href="assets/pwa/assets/images/features/feature-04.jpg" data-fancybox="images">
+																		<img src="assets/pwa/assets/images/features/feature-04.jpg" alt="Feature Image">
+																	</a>
+																</li>
+															</ul>
+														</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="tab-widget">
+											<div class="left-icon-col">
+									      		<span><img src="assets/pwa/assets/images/icon-awesome-user.svg" alt="i"></span>
+									      	</div>
+
+									      	<div class="right-content-col">
+									      		<div class="doctor-widget">
+									      			<h6>About us</h6>
+									      			<p>Jefferson Urgent Care provides a convenient alternative to visiting the Emergency Room. You get the specialized care you need to treat your non-emergent injuries or conditions by an experienced medical professional. Best of all, there’s no long wait.</p>
+									      		</div>
+									      	</div>
+										</div>
+
+										<div class="tab-widget">
+											<div class="left-icon-col">
+									      		<span><img src="assets/pwa/assets/images/icon-book.svg" alt="i"></span>
+									      	</div>
+
+									      	<div class="right-content-col">
+									      		<div class="doctor-widget">
+									      			<div class="col-md-5">
+													<div class="clinic-content">
+													    <h4 class="clinic-name"><a href="#">Address</a></h4>
+														 <div class="clinic-details mb-0"> 
+															<h5 class="clinic-direction"> <i class="fas fa-map-marker-alt"></i> 245 Main Street, Philadelphia, PA 034234 <br><a href="javascript:void(0);">Get Directions</a></h5>
+														</div>
+													</div>
+												</div>
+												<!-- /Clinic Content -->
+												
+												<!-- Clinic Timing -->
+												<div class="col-md-4">
+													<div class="clinic-timing">
+														<div>
+															<p class="timings-days">
+																<span> Next Available Time </span>
+															</p>
+															<p class="timings-times">
+																<span>10:00 AM</span>
+																<span>10:30 AM</span>
+															</p>
+														</div>
+													</div>
+												</div>
+									      		</div>
+									      	</div>
+										</div>
+
+										<div class="tab-widget">
+											<div class="left-icon-col">
+									      		<span><img src="assets/pwa/assets/images/icon-user-nurse.svg" alt="i"></span>
+									      	</div>
+
+									      	<div class="right-content-col">
+									      		<div class="doctor-widget">
+									      			<h6>Services</h6>
+									      			<ul>
+									      				<li><i class="material-icons">checkmark_alt</i> Accidents and falls</li>
+									      				<li><i class="material-icons">checkmark_alt</i> Sprains and strains</li>
+									      				<li><i class="material-icons">checkmark_alt</i> Breathing difficulties (i.e. mild to moderate asthma)</li>
+									      				<li><i class="material-icons">checkmark_alt</i> Bleeding/cuts – not bleeding a lot but requiring stitches</li>
+									      				<li><i class="material-icons">checkmark_alt</i> Diagnostic services</li>
+									      				<li><i class="material-icons">checkmark_alt</i> Fever or flu</li>
+									      				<li><i class="material-icons">checkmark_alt</i> Vomiting, diarrhea or dehydration</li>
+									      				<li><i class="material-icons">checkmark_alt</i> Minor broken bones and fractures (i.e. fingers, toes)</li>
+									      				<li><i class="material-icons">checkmark_alt</i> Skin rashes and infections</li>
+									      				<li><i class="material-icons">checkmark_alt</i> Plus, much more</li>
+									      			</ul>
+									      		</div>
+									      	</div>
+										</div>
+
+										<div class="tab-widget">
+											<div class="left-icon-col">
+									      		<span><img src="assets/pwa/assets/images/icon-clinic-medical.svg" alt="i"></span>
+									      	</div>
+
+									      	<div class="right-content-col">
+									      		<div class="doctor-widget">
+									      			<h6>Specializations</h6>
+									      			<ul>
+									      				<li><i class="material-icons">checkmark_alt</i> Orthopedics</li>
+									      				<li><i class="material-icons">checkmark_alt</i> Covid-19</li>
+									      				<li><i class="material-icons">checkmark_alt</i> Occupational Medicine</li>
+									      			</ul>
+									      		</div>
+									      	</div>
+										</div>
+						          	</div>
+						        </div>
+						    </div>
+						</div>
+
+						<div class="tab-pane" id="virtual">
+							<div class="panel panel-default">
+							  <div id="collapseTwo" class="panel-collapse collapse">
+									<div class="panel-body">
+										<!-- Location List -->
+									  <div class="location-list">
+										  <div class="row">
+										  
+											  <!-- Clinic Content -->
+											  <div class="col-md-6">
+												  <div class="clinic-content">
+													  <h4 class="clinic-name"><a href="www.jeffconnect.com">Jefferson Connect Virtual Care</a></h4>
+													  <p class="doc-speciality">Telemedicine</p>
+													  <div class="rating">
+														
+													  </div>
+													  <div class="chat-list-title"><i><img src="assets/pwa/assets/images/chat.svg" alt=""></i> Chat with a doctor from anywhere.</div>
+													  <div class="clinic-details mb-0">
+															 
+														  <h5 class="clinic-direction"> <i class="fas fa-map-marker-alt"></i> Pennsylvania, USA <br><a href="javascript:void(0);"></a></h5>
+													  </div>
+												  </div>
+											  </div>
+											  <!-- /Clinic Content -->
+											  <!-- Clinic Timing -->
+											  <div class="col-md-4">
+												  <div class="clinic-timing">
+													  <div class="doc-info-right">
+	<div class="clini-infos">
+													
+	<div class="page-content change-password-col register-col">
+		<ul class="change-list">
+            <li class="item-content item-input">
+              <div class="item-col">
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="Name/Email/DOB">
+                    <div class="item-input-icon"><img src="assets/pwa/assets/images/user-icon.svg" alt=""></div>
+                </div>
+              </div>
+            </li>
+		</ul>
     </div>
-
-    <div class="page-content pt-0">
-
-        <!-- Doctor Profile -->
-        <div class="doctor-profile-tab">
-            <div class="container">
-                 <div class="tab-col">
-                     <ul class="nav nav-tabs">
-                        <li><a href="#OverView" data-toggle="tab" class="active">Overview</a></li>  
-                        <li><a href="#virtual" data-toggle="tab">Virtual care</a></li>
-                        <li><a href="#Reviews" data-toggle="tab">Reviews</a></li>
-                        <li><a href="#Hours" data-toggle="tab">Hours</a></li>
-                      </ul>
-                  </div>
-
-                  <div class="tab-content">
-                    <div class="tab-pane active" id="OverView">
-                        <div class="panel panel-default">
-                            <div id="collapseOne" class="panel-collapse collapse in">
-                                  <div class="panel-body">
-                                      <div class="tab-widget">
-                                          <div class="left-icon-col">
-                                              <span><img src="assets/pwa/assets/images/i-icon.svg" alt="i"></span>
-                                          </div>
-                                          
-                                        <div class="right-content-col">
-                                            <div class="doctor-widget">
-                                                <div class="doc-info-left">
-                                                    <div class="doctor-img">
-                                                        <a href="doctor-profile.html" class="doctor-img-profile">
-                                                            <img src="assets/pwa/assets/images/doctors/doctor-thumb-02.jpg" class="img-fluid img-circle" alt="User Image">
-                                                        </a>
-                                                    </div>
-                                                    <div class="doc-info-cont">
-                                                        <h4 class="doc-name"><a href="doctor-profile.html">Jefferson Health</a></h4>
-                                                        <h5 class="doc-department">
-                                                            <span class="speciality-img"><img src="assets/pwa/assets/images/specialities/specialities-03.png" class="img-fluid" alt="Speciality"></span> Urgent Care
-                                                        </h5> 
-                                                        <a class="sidebar-logout" href="https://integration.quickrcare.com/booking/eb6c5625c8af48b28919bc4e36d9bb4c"
-                                                        ><span><img src="assets/pwa/assets/images/open-account-logout.svg" alt=""></span>Book Now
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="doc-info-right">
-                                                    <div class="doc-info">
-                                                        <span class="doc-experince">Closed</span>
-                                                        <div class="clinic-details mb-0">
-                                                            <div class="rating">
-                                                        <i class="fas fa-star filled"></i>
-                                                        <i class="fas fa-star filled"></i>
-                                                        <i class="fas fa-star filled"></i>
-                                                        <i class="fas fa-star filled"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <span class="d-inline-block average-rating">(16592)</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="assets/pwa/assets/images/features/feature-01.jpg" data-fancybox="images">
-                                                                    <img src="assets/pwa/assets/images/features/feature-01.jpg" alt="Feature Image">
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="assets/pwa/assets/images/features/feature-02.jpg" data-fancybox="images">
-                                                                    <img src="assets/pwa/assets/images/features/feature-02.jpg" alt="Feature Image">
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="assets/pwa/assets/images/features/feature-03.jpg" data-fancybox="images">
-                                                                    <img src="assets/pwa/assets/images/features/feature-03.jpg" alt="Feature Image">
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="assets/pwa/assets/images/features/feature-04.jpg" data-fancybox="images">
-                                                                    <img src="assets/pwa/assets/images/features/feature-04.jpg" alt="Feature Image">
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-widget">
-                                        <div class="left-icon-col">
-                                              <span><img src="assets/pwa/assets/images/icon-awesome-user.svg" alt="i"></span>
-                                          </div>
-
-                                          <div class="right-content-col">
-                                              <div class="doctor-widget">
-                                                  <h6>About us</h6>
-                                                  <p>Jefferson Urgent Care provides a convenient alternative to visiting the Emergency Room. You get the specialized care you need to treat your non-emergent injuries or conditions by an experienced medical professional. Best of all, there’s no long wait.</p>
-                                              </div>
-                                          </div>
-                                    </div>
-
-                                    <div class="tab-widget">
-                                        <div class="left-icon-col">
-                                              <span><img src="assets/pwa/assets/images/icon-book.svg" alt="i"></span>
-                                          </div>
-
-                                          <div class="right-content-col">
-                                              <div class="doctor-widget">
-                                                  <div class="col-md-5">
-                                                <div class="clinic-content">
-                                                    <h4 class="clinic-name"><a href="#">Address</a></h4>
-                                                     <div class="clinic-details mb-0"> 
-                                                        <h5 class="clinic-direction"> <i class="fas fa-map-marker-alt"></i> 245 Main Street, Philadelphia, PA 034234 <br><a href="javascript:void(0);">Get Directions</a></h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- /Clinic Content -->
-                                            
-                                            <!-- Clinic Timing -->
-                                            <div class="col-md-4">
-                                                <div class="clinic-timing">
-                                                    <div>
-                                                        <p class="timings-days">
-                                                            <span> Next Available Time </span>
-                                                        </p>
-                                                        <p class="timings-times">
-                                                            <span>10:00 AM</span>
-                                                            <span>10:30 AM</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                              </div>
-                                          </div>
-                                    </div>
-
-                                    <div class="tab-widget">
-                                        <div class="left-icon-col">
-                                              <span><img src="assets/pwa/assets/images/icon-user-nurse.svg" alt="i"></span>
-                                          </div>
-
-                                          <div class="right-content-col">
-                                              <div class="doctor-widget">
-                                                  <h6>Services</h6>
-                                                  <ul>
-                                                      <li><i class="material-icons">checkmark_alt</i> Accidents and falls</li>
-                                                      <li><i class="material-icons">checkmark_alt</i> Sprains and strains</li>
-                                                      <li><i class="material-icons">checkmark_alt</i> Breathing difficulties (i.e. mild to moderate asthma)</li>
-                                                      <li><i class="material-icons">checkmark_alt</i> Bleeding/cuts – not bleeding a lot but requiring stitches</li>
-                                                      <li><i class="material-icons">checkmark_alt</i> Diagnostic services</li>
-                                                      <li><i class="material-icons">checkmark_alt</i> Fever or flu</li>
-                                                      <li><i class="material-icons">checkmark_alt</i> Vomiting, diarrhea or dehydration</li>
-                                                      <li><i class="material-icons">checkmark_alt</i> Minor broken bones and fractures (i.e. fingers, toes)</li>
-                                                      <li><i class="material-icons">checkmark_alt</i> Skin rashes and infections</li>
-                                                      <li><i class="material-icons">checkmark_alt</i> Plus, much more</li>
-                                                  </ul>
-                                              </div>
-                                          </div>
-                                    </div>
-
-                                    <div class="tab-widget">
-                                        <div class="left-icon-col">
-                                              <span><img src="assets/pwa/assets/images/icon-clinic-medical.svg" alt="i"></span>
-                                          </div>
-
-                                          <div class="right-content-col">
-                                              <div class="doctor-widget">
-                                                  <h6>Specializations</h6>
-                                                  <ul>
-                                                      <li><i class="material-icons">checkmark_alt</i> Orthopedics</li>
-                                                      <li><i class="material-icons">checkmark_alt</i> Covid-19</li>
-                                                      <li><i class="material-icons">checkmark_alt</i> Occupational Medicine</li>
-                                                  </ul>
-                                              </div>
-                                          </div>
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane" id="virtual">
-                        <div class="panel panel-default">
-                          <div id="collapseTwo" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <!-- Location List -->
-                                  <div class="location-list">
-                                      <div class="row">
-                                      
-                                          <!-- Clinic Content -->
-                                          <div class="col-md-6">
-                                              <div class="clinic-content">
-                                                  <h4 class="clinic-name"><a href="www.jeffconnect.com">Jefferson Connect Virtual Care</a></h4>
-                                                  <p class="doc-speciality">Telemedicine</p>
-                                                  <div class="rating">
-                                                    
-                                                  </div>
-                                                  <div class="chat-list-title"><i><img src="assets/pwa/assets/images/chat.svg" alt=""></i> Chat with a doctor from anywhere.</div>
-                                                  <div class="clinic-details mb-0">
-                                                         
-                                                      <h5 class="clinic-direction"> <i class="fas fa-map-marker-alt"></i> Pennsylvania, USA <br><a href="javascript:void(0);"></a></h5>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <!-- /Clinic Content -->
-                                          <!-- Clinic Timing -->
-                                          <div class="col-md-4">
-                                              <div class="clinic-timing">
-                                                  <div class="doc-info-right">
-<div class="clini-infos">
-                                                
-<div class="page-content change-password-col register-col">
-    <ul class="change-list">
-        <li class="item-content item-input">
-          <div class="item-col">
-            <div class="item-input-wrap">
-              <input type="text" placeholder="Name/Email/DOB">
-                <div class="item-input-icon"><img src="assets/pwa/assets/images/user-icon.svg" alt=""></div>
-            </div>
-          </div>
-        </li>
-    </ul>
+			
+	</div>
+		<div class="clinic-booking">
+			<div class="clinic-btn">
+				<a class="apt-btn" href="https://www.jeffconnect.org/accounts/new">Confirm Virtual Visit</a>
+			</div>
+		</div>
 </div>
-        
-</div>
-    <div class="clinic-booking">
-        <div class="clinic-btn">
-            <a class="apt-btn" href="https://www.jeffconnect.org/accounts/new">Confirm Virtual Visit</a>
-        </div>
-    </div>
-</div>
-                                              </div>
-                                          </div>
-                                          <!-- /Clinic Timing -->
-                                      </div>
-                                  </div>
-                                  <!-- /Location List -->
-                                </div>
-                            </div>
-                      </div>
-                  </div>
+												  </div>
+											  </div>
+											  <!-- /Clinic Timing -->
+										  </div>
+									  </div>
+									  <!-- /Location List -->
+									</div>
+								</div>
+						  </div>
+					  </div>
 
-                    <div class="tab-pane" id="Location">
-                          <div class="panel panel-default">
-                            <div id="collapseTwo" class="panel-collapse collapse">
-                                  <div class="panel-body">
-                                      <!-- Location List -->
-                                    <div class="location-list">
-                                        <div class="row">
-                                        
-                                            <!-- Clinic Content -->
-                                            <div class="col-md-6">
-                                                <div class="clinic-content">
-                                                    <h4 class="clinic-name"><a href="#">Smile Cute Dental Care Center</a></h4>
-                                                    <p class="doc-speciality">MDS - Periodontology and Oral Implantology</p>
-                                                    <div class="rating">
-                                                        <i class="fas fa-star filled"></i>
-                                                        <i class="fas fa-star filled"></i>
-                                                        <i class="fas fa-star filled"></i>
-                                                        <i class="fas fa-star filled"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <span class="d-inline-block average-rating">(16592)</span>
-                                                    </div>
-                                                    <div class="clinic-details mb-0">
-                                                        <ul>
-                                                            <li>
-                                                                <a href="assets/pwa/assets/images/features/feature-01.jpg" data-fancybox="images">
-                                                                    <img src="assets/pwa/assets/images/features/feature-01.jpg" alt="Feature Image">
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="assets/pwa/assets/images/features/feature-02.jpg" data-fancybox="images">
-                                                                    <img src="assets/pwa/assets/images/features/feature-02.jpg" alt="Feature Image">
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="assets/pwa/assets/images/features/feature-03.jpg" data-fancybox="images">
-                                                                    <img src="assets/pwa/assets/images/features/feature-03.jpg" alt="Feature Image">
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="assets/pwa/assets/images/features/feature-04.jpg" data-fancybox="images">
-                                                                    <img src="assets/pwa/assets/images/features/feature-04.jpg" alt="Feature Image">
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="consult-price">
-                                                            $250
-                                                        </div>
-                                                        <h5 class="clinic-direction"> <i class="fas fa-map-marker-alt"></i> 2286 Sundown Lane, Austin, Texas 78749, USA <br><a href="javascript:void(0);">Get Directions</a></h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- /Clinic Content -->
-                                            
-                                            <!-- Clinic Timing -->
-                                            <div class="col-md-4">
-                                                <div class="clinic-timing">
-                                                    <div>
-                                                        <p class="timings-days">
-                                                            <span> Mon - Sat </span>
-                                                        </p>
-                                                        <p class="timings-times">
-                                                            <span>10:00 AM - 2:00 PM</span>
-                                                            <span>4:00 PM - 9:00 PM</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- /Clinic Timing -->
-                                        </div>
-                                    </div>
-                                    <!-- /Location List -->
-                                  </div>
-                              </div>
-                        </div>
-                    </div>
+						<div class="tab-pane" id="Location">
+					      	<div class="panel panel-default">
+					        	<div id="collapseTwo" class="panel-collapse collapse">
+					          		<div class="panel-body">
+					          			<!-- Location List -->
+										<div class="location-list">
+											<div class="row">
+											
+												<!-- Clinic Content -->
+												<div class="col-md-6">
+													<div class="clinic-content">
+														<h4 class="clinic-name"><a href="#">Smile Cute Dental Care Center</a></h4>
+														<p class="doc-speciality">MDS - Periodontology and Oral Implantology</p>
+														<div class="rating">
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star"></i>
+															<span class="d-inline-block average-rating">(16592)</span>
+														</div>
+														<div class="clinic-details mb-0">
+															<ul>
+																<li>
+																	<a href="assets/pwa/assets/images/features/feature-01.jpg" data-fancybox="images">
+																		<img src="assets/pwa/assets/images/features/feature-01.jpg" alt="Feature Image">
+																	</a>
+																</li>
+																<li>
+																	<a href="assets/pwa/assets/images/features/feature-02.jpg" data-fancybox="images">
+																		<img src="assets/pwa/assets/images/features/feature-02.jpg" alt="Feature Image">
+																	</a>
+																</li>
+																<li>
+																	<a href="assets/pwa/assets/images/features/feature-03.jpg" data-fancybox="images">
+																		<img src="assets/pwa/assets/images/features/feature-03.jpg" alt="Feature Image">
+																	</a>
+																</li>
+																<li>
+																	<a href="assets/pwa/assets/images/features/feature-04.jpg" data-fancybox="images">
+																		<img src="assets/pwa/assets/images/features/feature-04.jpg" alt="Feature Image">
+																	</a>
+																</li>
+															</ul>
+															<div class="consult-price">
+																$250
+															</div>
+															<h5 class="clinic-direction"> <i class="fas fa-map-marker-alt"></i> 2286 Sundown Lane, Austin, Texas 78749, USA <br><a href="javascript:void(0);">Get Directions</a></h5>
+														</div>
+													</div>
+												</div>
+												<!-- /Clinic Content -->
+												
+												<!-- Clinic Timing -->
+												<div class="col-md-4">
+													<div class="clinic-timing">
+														<div>
+															<p class="timings-days">
+																<span> Mon - Sat </span>
+															</p>
+															<p class="timings-times">
+																<span>10:00 AM - 2:00 PM</span>
+																<span>4:00 PM - 9:00 PM</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<!-- /Clinic Timing -->
+											</div>
+										</div>
+										<!-- /Location List -->
+					          		</div>
+					          	</div>
+					        </div>
+					    </div>
 <!-- /Booking List --> -->
 <div class="tab-pane" id="qcbooking">
-                        <div class="panel panel-default">
-                          <div id="collapseTwo" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <!-- Locations List -->
-                                  <div class="location-list">
-                                      <div class="row">
-                                      
-                                          <!-- Clinic Content -->
-                                          <div class="doctor-widget">
-                                        <div iframe src="https://integration.quickrcare.com/booking/eb6c5625c8af48b28919bc4e36d9bb4c" height="100%" width="100%" style="border:1px solid #ededed;">
-                                        </div>
+							<div class="panel panel-default">
+							  <div id="collapseTwo" class="panel-collapse collapse">
+									<div class="panel-body">
+										<!-- Locations List -->
+									  <div class="location-list">
+										  <div class="row">
+										  
+											  <!-- Clinic Content -->
+											  <div class="doctor-widget">
+											<div iframe src="https://integration.quickrcare.com/booking/eb6c5625c8af48b28919bc4e36d9bb4c" height="100%" width="100%" style="border:1px solid #ededed;">
+											</div>
 
-                                    </div>
-                                          <!-- /Clinic Timing -->
-                                      </div>
-                                  </div>
-                                  <!-- /Location List -->
-                                </div>
-                            </div>
-                      </div>
-                  </div>
-                  <!-- /Reviews -->
-                    <div class="tab-pane" id="Reviews">
-                          <div class="panel panel-default">
-                            <div id="collapseThree" class="panel-collapse collapse">
-                                  <div class="panel-body">
-                                      <!-- Review Listing -->
-                                        <div class="widget review-listing">
-                                            <ul class="comments-list">
-                                            
-                                                <!-- Comment List -->
-                                                <li>
-                                                    <div class="comment">
-                                                        <img class="avatar avatar-sm rounded-circle" alt="User Image" src="assets/pwa/assets/images/patients/patient10.jpg">
-                                                        <div class="comment-body">
-                                                            <div class="meta-data">
-                                                                <span class="comment-author">Richard Wilson</span>
-                                                                <span class="comment-date">Reviewed 2 Days ago</span>
-                                                                <div class="review-count rating">
-                                                                    <i class="fas fa-star filled"></i>
-                                                                    <i class="fas fa-star filled"></i>
-                                                                    <i class="fas fa-star filled"></i>
-                                                                    <i class="fas fa-star filled"></i>
-                                                                    <i class="fas fa-star"></i>
-                                                                </div>
-                                                            </div>
-                                                            <p class="recommended"><i class="far fa-thumbs-up"></i> I recommend the doctor</p>
-                                                            <p class="comment-content">
-                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                                                            </p>
-                                                            <div class="comment-reply">
-                                                                <a class="comment-btn" href="#">
-                                                                    <i class="fas fa-reply"></i> Reply
-                                                                </a>
-                                                               <p class="recommend-btn">
-                                                                <span>Recommend?</span>
-                                                                <a href="#" class="like-btn">
-                                                                    <i class="far fa-thumbs-up"></i> Yes
-                                                                </a>
-                                                                <a href="#" class="dislike-btn">
-                                                                    <i class="far fa-thumbs-down"></i> No
-                                                                </a>
-                                                            </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+										</div>
+											  <!-- /Clinic Timing -->
+										  </div>
+									  </div>
+									  <!-- /Location List -->
+									</div>
+								</div>
+						  </div>
+					  </div>
+					  <!-- /Reviews -->
+					    <div class="tab-pane" id="Reviews">
+				      		<div class="panel panel-default">
+					        	<div id="collapseThree" class="panel-collapse collapse">
+					          		<div class="panel-body">
+					          			<!-- Review Listing -->
+											<div class="widget review-listing">
+												<ul class="comments-list">
+												
+													<!-- Comment List -->
+													<li>
+														<div class="comment">
+															<img class="avatar avatar-sm rounded-circle" alt="User Image" src="assets/pwa/assets/images/patients/patient10.jpg">
+															<div class="comment-body">
+																<div class="meta-data">
+																	<span class="comment-author">Richard Wilson</span>
+																	<span class="comment-date">Reviewed 2 Days ago</span>
+																	<div class="review-count rating">
+																		<i class="fas fa-star filled"></i>
+																		<i class="fas fa-star filled"></i>
+																		<i class="fas fa-star filled"></i>
+																		<i class="fas fa-star filled"></i>
+																		<i class="fas fa-star"></i>
+																	</div>
+																</div>
+																<p class="recommended"><i class="far fa-thumbs-up"></i> I recommend the doctor</p>
+																<p class="comment-content">
+																	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+																</p>
+																<div class="comment-reply">
+																	<a class="comment-btn" href="#">
+																		<i class="fas fa-reply"></i> Reply
+																	</a>
+																   <p class="recommend-btn">
+																	<span>Recommend?</span>
+																	<a href="#" class="like-btn">
+																		<i class="far fa-thumbs-up"></i> Yes
+																	</a>
+																	<a href="#" class="dislike-btn">
+																		<i class="far fa-thumbs-down"></i> No
+																	</a>
+																</p>
+																</div>
+															</div>
+														</div>
 
-                                                    
-                                                </li>
-                                                <!-- /Comment List -->
-                                                
-                                                <!-- Comment List -->
-                                                <li>
-                                                    <div class="comment">
-                                                        <img class="avatar avatar-sm rounded-circle" alt="User Image" src="assets/pwa/assets/images/patients/patient2.jpg">
-                                                        <div class="comment-body">
-                                                            <div class="meta-data">
-                                                                <span class="comment-author">Travis Trimble</span>
-                                                                <span class="comment-date">Reviewed 4 Days ago</span>
-                                                                <div class="review-count rating">
-                                                                    <i class="fas fa-star filled"></i>
-                                                                    <i class="fas fa-star filled"></i>
-                                                                    <i class="fas fa-star filled"></i>
-                                                                    <i class="fas fa-star filled"></i>
-                                                                    <i class="fas fa-star"></i>
-                                                                </div>
-                                                            </div>
-                                                            <p class="comment-content">
-                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                                Ut enim ad minim veniam, quis nostrud exercitation.
-                                                                Curabitur non nulla sit amet nisl tempus
-                                                            </p>
-                                                            <div class="comment-reply">
-                                                                <a class="comment-btn" href="#">
-                                                                    <i class="fas fa-reply"></i> Reply
-                                                                </a>
-                                                                <p class="recommend-btn">
-                                                                    <span>Recommend?</span>
-                                                                    <a href="#" class="like-btn">
-                                                                        <i class="far fa-thumbs-up"></i> Yes
-                                                                    </a>
-                                                                    <a href="#" class="dislike-btn">
-                                                                        <i class="far fa-thumbs-down"></i> No
-                                                                    </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <!-- /Comment List -->
-                                                
-                                            </ul>
-                                            
-                                            <!-- Show All -->
-                                            <div class="all-feedback text-center">
-                                                <a href="#" class="btn btn-sm">
-                                                    Show all feedback <strong>(167)</strong>
-                                                </a>
-                                            </div>
-                                            <!-- /Show All -->
-                                            
-                                        </div>
-                                        <!-- /Review Listing -->
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+														
+													</li>
+													<!-- /Comment List -->
+													
+													<!-- Comment List -->
+													<li>
+														<div class="comment">
+															<img class="avatar avatar-sm rounded-circle" alt="User Image" src="assets/pwa/assets/images/patients/patient2.jpg">
+															<div class="comment-body">
+																<div class="meta-data">
+																	<span class="comment-author">Travis Trimble</span>
+																	<span class="comment-date">Reviewed 4 Days ago</span>
+																	<div class="review-count rating">
+																		<i class="fas fa-star filled"></i>
+																		<i class="fas fa-star filled"></i>
+																		<i class="fas fa-star filled"></i>
+																		<i class="fas fa-star filled"></i>
+																		<i class="fas fa-star"></i>
+																	</div>
+																</div>
+																<p class="comment-content">
+																	Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+																	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+																	Ut enim ad minim veniam, quis nostrud exercitation.
+																	Curabitur non nulla sit amet nisl tempus
+																</p>
+																<div class="comment-reply">
+																	<a class="comment-btn" href="#">
+																		<i class="fas fa-reply"></i> Reply
+																	</a>
+																	<p class="recommend-btn">
+																		<span>Recommend?</span>
+																		<a href="#" class="like-btn">
+																			<i class="far fa-thumbs-up"></i> Yes
+																		</a>
+																		<a href="#" class="dislike-btn">
+																			<i class="far fa-thumbs-down"></i> No
+																		</a>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</li>
+													<!-- /Comment List -->
+													
+												</ul>
+												
+												<!-- Show All -->
+												<div class="all-feedback text-center">
+													<a href="#" class="btn btn-sm">
+														Show all feedback <strong>(167)</strong>
+													</a>
+												</div>
+												<!-- /Show All -->
+												
+											</div>
+											<!-- /Review Listing -->
+					          		</div>
+					          	</div>
+				          	</div>
+				      	</div>
 
-                      <div class="tab-pane" id="Hours">
-                          <div class="panel panel-default">
-                            <div id="collapseFour" class="panel-collapse collapse">
-                                  <div class="panel-body">
-                                      <!-- Business Hours Widget -->
-                                    <div class="widget business-widget">
-                                        <div class="widget-content">
-                                            <div class="listing-day current">
-                                                <div class="left-icon"><img src="assets/pwa/assets/images/today-icon.svg" alt=""></div>
-                                                <div class="day">Today <span>November 1 2021</span></div>
-                                                <div class="time-items">
-                                                    <span class="open-status"><span class="badge bg-success-light">Open Now</span></span>
-                                                    <span class="time">07:00 AM - 09:00 PM</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="widget business-widget">
-                                        <div class="widget-content">
-                                            <div class="listing-hours">
-                                                <div class="listing-day">
-                                                    <div class="day"><i class="check-icon-black"></i> Monday</div>
-                                                    <div class="time-items">
-                                                        <span class="time">07:00 AM - 09:00 PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="listing-day">
-                                                    <div class="day"><i class="check-icon-black"></i> Tuesday</div>
-                                                    <div class="time-items">
-                                                        <span class="time">07:00 AM - 09:00 PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="listing-day">
-                                                    <div class="day"><i class="check-icon-black"></i> Wednesday</div>
-                                                    <div class="time-items">
-                                                        <span class="time">07:00 AM - 09:00 PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="listing-day">
-                                                    <div class="day"><i class="check-icon-black"></i> Thursday</div>
-                                                    <div class="time-items">
-                                                        <span class="time">07:00 AM - 09:00 PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="listing-day">
-                                                    <div class="day"><i class="check-icon-black"></i> Friday</div>
-                                                    <div class="time-items">
-                                                        <span class="time">07:00 AM - 09:00 PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="listing-day">
-                                                    <div class="day"><i class="check-icon-black"></i> Saturday</div>
-                                                    <div class="time-items">
-                                                        <span class="time">07:00 AM - 09:00 PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="listing-day closed">
-                                                    <div class="day"><i class="check-icon-red"></i> Sunday</div>
-                                                    <div class="time-items">
-                                                        <span class="time"><span class="badge bg-danger-light">Closed</span></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /Business Hours Widget -->  
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+				      	<div class="tab-pane" id="Hours">
+			      			<div class="panel panel-default">
+			        			<div id="collapseFour" class="panel-collapse collapse">
+			          				<div class="panel-body">
+			          					<!-- Business Hours Widget -->
+								    	<div class="widget business-widget">
+											<div class="widget-content">
+												<div class="listing-day current">
+													<div class="left-icon"><img src="assets/pwa/assets/images/today-icon.svg" alt=""></div>
+													<div class="day">Today <span>November 1 2021</span></div>
+													<div class="time-items">
+														<span class="open-status"><span class="badge bg-success-light">Open Now</span></span>
+														<span class="time">07:00 AM - 09:00 PM</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="widget business-widget">
+											<div class="widget-content">
+												<div class="listing-hours">
+													<div class="listing-day">
+														<div class="day"><i class="check-icon-black"></i> Monday</div>
+														<div class="time-items">
+															<span class="time">07:00 AM - 09:00 PM</span>
+														</div>
+													</div>
+													<div class="listing-day">
+														<div class="day"><i class="check-icon-black"></i> Tuesday</div>
+														<div class="time-items">
+															<span class="time">07:00 AM - 09:00 PM</span>
+														</div>
+													</div>
+													<div class="listing-day">
+														<div class="day"><i class="check-icon-black"></i> Wednesday</div>
+														<div class="time-items">
+															<span class="time">07:00 AM - 09:00 PM</span>
+														</div>
+													</div>
+													<div class="listing-day">
+														<div class="day"><i class="check-icon-black"></i> Thursday</div>
+														<div class="time-items">
+															<span class="time">07:00 AM - 09:00 PM</span>
+														</div>
+													</div>
+													<div class="listing-day">
+														<div class="day"><i class="check-icon-black"></i> Friday</div>
+														<div class="time-items">
+															<span class="time">07:00 AM - 09:00 PM</span>
+														</div>
+													</div>
+													<div class="listing-day">
+														<div class="day"><i class="check-icon-black"></i> Saturday</div>
+														<div class="time-items">
+															<span class="time">07:00 AM - 09:00 PM</span>
+														</div>
+													</div>
+													<div class="listing-day closed">
+														<div class="day"><i class="check-icon-red"></i> Sunday</div>
+														<div class="time-items">
+															<span class="time"><span class="badge bg-danger-light">Closed</span></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- /Business Hours Widget -->  
+			          				</div>
+			          			</div>
+			          		</div>
+			          	</div>
 
-                </div>
-            </div>
-        </div>
-        <!-- Doctor Profile -->
+					</div>
+				</div>
+			</div>
+			<!-- Doctor Profile -->
 
-        <div class="book-appointment-btn">
-            <a href="#" class="btn">Book Urgent Care</a>
-        </div>
+			<div class="book-appointment-btn">
+				<a href="#" class="btn">Book Urgent Care</a>
+			</div>
 
-    </div>
+	    </div>
 
-</div>
+	</div>

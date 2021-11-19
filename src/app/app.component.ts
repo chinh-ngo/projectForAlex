@@ -241,6 +241,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
           this.show = false;
           this.hideFooter = true;
           this.loadFooter = false;
+          document.querySelector('body').classList.remove('mat-typography');
         }
         else if (this.url == 'pharmacy-admin') {
           this.show = false;
@@ -319,6 +320,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     });
     this.url = location.path();
     this.show = this.url.includes('admin') ? false : true;
+    this.show = this.url.includes('pwa') ? false : true;
     this.show = this.url.includes('pharmacy-admin') ? false : true;
     this.commonServic.message.subscribe((res) => {
       if (res === 'admin' || res === 'pharmacy-admin') {

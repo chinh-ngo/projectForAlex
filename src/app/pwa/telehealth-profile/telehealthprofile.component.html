@@ -1,7 +1,7 @@
 <div class="main-wrapper">
 
     <div class="side-menu" id="sidebar-menu">
-        <div class="close-btn"><span class="material-icons">close</span></div>
+        <div class="close-btn" (click) = closeSidebar($event)><span class="material-icons">close</span></div>
         <ul>
             <li>
                 <a class="" href="index.html">
@@ -53,7 +53,7 @@
     <div class="navbar two-action no-hairline">
         <div class="navbar-inner d-flex align-items-center">
             <div class="left">
-                <a href="#" class="link icon-only">
+                <a (click) = showSidebar($event) class="link icon-only">
                     <i class="custom-hamburger">
                         <span><b></b></span>
                     </i>
