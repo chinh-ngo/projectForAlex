@@ -207,6 +207,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
           
         } 
         else if (event.url == '/home') {
+
           this.show = true;
           this.hideFooter = false;
           this.hidefooter1 = true;
@@ -238,6 +239,11 @@ export class AppComponent implements OnInit, AfterViewChecked {
           
         }
         else if (this.url == 'pwa') {
+          this.show = false;
+          this.hideFooter = true;
+          this.loadFooter = false;
+        }
+        else if (this.url == 'homenew') {
           this.show = false;
           this.hideFooter = true;
           this.loadFooter = false;
