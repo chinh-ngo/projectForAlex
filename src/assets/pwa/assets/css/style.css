@@ -2191,7 +2191,7 @@ body.overlay-body:before {
 	text-align: center;
 }
 .pro-img-upload {
-	background: rgba(33, 33, 33, 0.5) url("../img/upload-icon.png") no-repeat scroll center center / 16px auto;
+	background: rgba(33, 33, 33, 0.5) url("../images/upload-icon.png") no-repeat scroll center center / 16px auto;
 	border: none;
 	border-radius: 50%;
 	height: 28px;

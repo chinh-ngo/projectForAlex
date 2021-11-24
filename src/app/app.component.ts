@@ -241,7 +241,6 @@ export class AppComponent implements OnInit, AfterViewChecked {
           this.show = false;
           this.hideFooter = true;
           this.loadFooter = false;
-          document.querySelector('body').classList.remove('mat-typography');
         }
         else if (this.url == 'pharmacy-admin') {
           this.show = false;

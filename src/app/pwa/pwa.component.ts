@@ -47,6 +47,7 @@ export class PwaComponent implements OnInit {
     });
   }
   ngOnInit(): void {
+    this.document.getElementById('theme').setAttribute('href','assets/pwa/assets/css/style.css');
     // this.commonService.nextmessage('admin');
     let scope = this;
     // setTimeout(() => {
