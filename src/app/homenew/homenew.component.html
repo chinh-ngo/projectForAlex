@@ -1,0 +1,451 @@
+<!-- Header -->
+<header class="header header-four">
+    <nav class="navbar navbar-expand-lg header-nav ">
+        <div class="navbar-header">
+            <a id="mobile_btn" href="javascript:void(0);">
+                <span class="bar-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+            <a [routerLink]="'/home'" class="navbar-brand logo">
+                <img src="assets/img/footer-logo.png" class="img-fluid" alt="Logo">
+            </a>
+        </div>
+        <div class="main-menu-wrapper">
+            <div class="menu-header">
+                <a [routerLink]="'/home'" class="menu-logo">
+                    <img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+                </a>
+                <a id="menu_close" class="menu-close" href="javascript:void(0);">
+                    <i class="fas fa-times"></i>
+                </a>
+            </div>
+            <ul class="main-nav">
+                <li class="has-submenu">
+                    <a href="">Coronavirus </a>
+                    
+                </li>
+                <li class="has-submenu">
+                    <a href="">About us </a>
+                    
+                </li>   
+                <li class="has-submenu">
+                    <a href="">News </a>
+                    
+                </li>
+                <li class="has-submenu">
+                    <a href="">Social <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a [routerLink]="">Facebook</a></li>
+                        <li><a [routerLink]="">Instagram</a></li>
+                        <li><a [routerLink]="">Twitter</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="">Careers</a>
+                </li>
+                <li> <a [routerLink]="'/admin/dashboard'">Contact us</a>
+                    </li>
+                <li class="login-link">
+                    <a [routerLink]="'/login-page'">Login / Signup</a>
+                </li>                           
+                <li class="nav-item">
+                    <a class="nav-link header-login" [routerLink]="'/login-page'"><i class="fas fa-user-circle"></i> login / Signup </a>
+                </li>
+            </ul>        
+        </div>  
+    </nav>
+</header>
+<!-- /Header -->
+
+
+
+
+<!-- Home Banner -->
+<section class="section-search-3">
+    <div class="container">
+        <div class="banner-info">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="header-banner">
+                        <h2>Your sick care <br> <span class="header-highlight">Sidekick.</span></h2>
+                        <p>Tell us your symptoms<br>
+                        We will recommend your best Urgent Care, Emergency Room, or Virtual care options.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="doctor-search">
+                        <div class="doctor-form">
+                            <form action="#" class="doctor-search-form trans">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="form-custom">
+                                                <input type="text" class="form-control" value="" placeholder="Start by typing your symptoms">
+                                                <i class="far fa-sad"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <div class="form-custom">
+                                                <input type="text" class="form-control" value="" placeholder="Location">
+                                                <i class="far fa-compass"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <div class="form-custom">
+                                                <input type="text" class="form-control" value="" placeholder="Insurance">
+                                                <i class="far fa-smile"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="form-custom">
+                                                <input type="text" class="form-control" value="" placeholder="Prefered location(optional)">
+                                                <i class="far fa-smile"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a [routerLink]="'/patients/search-doctor'" class="btn banner-btn">Get Better</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+<!-- Clinic and Specialities -->
+<section class="section section-specialities">
+    <div class="container-fluid">
+        <div class="section-header text-center">
+            <h2>Browse care types</h2>
+            <p class="sub-title">Search all the different types of care settings we offer.</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <!-- Slider -->
+                <ngx-slick-carousel class="specialities-slider slider" #slickModal="slick-carousel" [config]="slideConfig3">
+                    <div ngxSlickItem *ngFor="let slide of slides" class="speicality-item text-center">
+                        <div class="speicality-img">
+                            <img src="{{slide.img}}" class="img-fluid" alt="Speciality">
+                            <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                        </div>
+                        <p>{{slide.name}}</p>
+                    </div>
+                </ngx-slick-carousel>
+                <!-- /Slider -->                
+            </div>
+        </div>
+    </div>   
+</section>	 
+<!-- Clinic and Specialities -->
+
+<!-- Popular Section -->
+<section class="book-section">
+    <div class="container">
+       <div class="section-header-three text-center">
+                        <h2>Closest locations</h2>
+                        <p class="sub-title">Here are some of the locations near you!</p>
+        </div>
+            
+            <div class="col-lg-20">
+                <div class="doctor-slider">
+                    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigure">
+                        <div class="slick-slide" *ngFor="let doctor of doctors;let i=index">
+                            <div ngxSlickItem>
+                                <div class="profile-widget" style="width: 100%; display: inline-block;">
+                                    <div class="doc-img">
+                                        <a [routerLink]="'/patients/doctor-profile'"
+                                            [queryParams]="{id: doctor.id}" tabindex="-1">
+                                            <img class="img-fluid" alt="User Image" [src]="doctor.profile">
+                                        </a>
+                                        <a href="javascript:void(0)" class="fav-btn" tabindex="-1">
+                                            <i class="far fa-bookmark"></i>
+                                        </a>
+                                    </div>
+                                    <div class="pro-content">
+                                        <h3 class="title">
+                                            <a [routerLink]="'/patients/doctor-profile'"
+                                                [queryParams]="{id: doctor.id}"
+                                                tabindex="-1">{{doctor.doctor_name}}</a>
+                                            <i class="fas fa-check-circle verified"></i>
+                                        </h3>
+                                        <p class="speciality">{{doctor.Education}}</p>
+                                        <div class="rating">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span class="d-inline-block average-rating">(49)</span>
+                                        </div>
+                                        <ul class="available-info">
+                                            <li>
+                                                <i class="fas fa-map-marker-alt"></i> {{doctor.Price}}
+                                            </li>
+                                            <li>
+                                                <i class="far fa-clock"></i> {{doctor.Available}}
+                                            </li>
+                                            <li>
+                                                <i class="far fa-money-bill-alt"></i> {{doctor.Price}}
+                                                <a href="javascript:void(0)" tooltip="Lorem Ipsum" placement="top"><i class="fas fa-info-circle"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="row row-sm">
+                                            <div class="col-6">
+                                                <a [routerLink]="'/patients/doctor-profile'"
+                                                    [queryParams]="{id: doctor.id}" class="btn view-btn"
+                                                    tabindex="-1">View Profile</a>
+                                            </div>
+                                            <div class="col-6">
+                                                <a [routerLink]="'/patients/booking'"
+                                                    [queryParams]="{id: doctor.id}" class="btn book-btn"
+                                                    tabindex="-1">Book
+                                                    Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ngx-slick-carousel>
+                </div> 
+            </div>
+       
+    </div>
+</section>
+<!-- /Popular Section -->
+
+<!-- Blog Section -->
+<section class="latest-blog">
+    <div class="container">
+        <div class="section-header-three text-center">
+                        <h2>What patients are saying</h2>
+                    </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="blog-wrap">
+                    <div class="image-holder">
+                    </div>
+                    <div class="blog-wrap-body">
+                        <h3><a [routerLink]="'/blog-details'">Jefferson Health-Rittenhouse</a></h3>
+                        <p>Knowing where to go is one thing, but when you are not feeling well, this makes getting help so much better.</p>
+                        <div class="blog-footer">
+                            <div class="row row-sm align-items-center">
+                                <div class="col-6 text-left">
+                                    <a [routerLink]="'/blog-details'" class="read-txt" tabindex="0">Tom R.</a>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a href="javascript:void(0);" class="cal-txt" tabindex="0"><i class=""></i> Jan 03, 2021</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="blog-wrap">
+                    <div class="blog-wrap-body">
+                        <h3><a [routerLink]="'/blog-details'">Jefferson Health- Grant Ave.</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                        ut labore et..</p>
+                        <div class="blog-footer">
+                            <div class="row row-sm align-items-center">
+                                <div class="col-6 text-left">
+                                    <a [routerLink]="'/blog-details'" class="read-txt" tabindex="0">mary W. </a>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a href="javascript:void(0);" class="cal-txt" tabindex="0"><i class=""></i> Mar 13, 2021</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="blog-wrap">
+                    <div class="blog-wrap-body">
+                        <h3><a [routerLink]="'/blog-details'">Beverly Hospital</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                        ut labore et..</p>
+                        <div class="blog-footer">
+                            <div class="row row-sm align-items-center">
+                                <div class="col-6 text-left">
+                                    <a [routerLink]="'/blog-details'" class="read-txt" tabindex="0">Karen C.</a>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a href="javascript:void(0);" class="cal-txt" tabindex="0"><i class=""></i> Jan 03, 2020</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Blog Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer footer-2 custom-footer">
+                
+    <!-- Footer Top -->
+    <div class="footer-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1 col-md-1">
+                 </div>   
+                <div class="col-lg-3 col-md-6">
+                
+                    <!-- Footer Widget -->
+                    <div class="footer-widget footer-menu">
+                        <div class="footer-logo">
+                            <img src="assets/img/footer-logo.png" alt="logo">
+                        </div>
+                        <div class="footer-about-content">
+                            <p>Your sick care sidekick</p>
+                        </div>
+                        <div class="footer-widget footer-contact mt-4">
+                            <h2 class="footer-title">Our Location</h2>
+                            <div class="footer-contact-info">
+                                <div class="footer-address">
+                                    <span><i class="fas fa-map-marker-alt"></i></span>
+                                    <p>Miami, FL</p>
+                                </div>
+                                <p>
+                                    <i class="fas fa-phone-alt"></i>
+                                    305-204-1112
+                                </p>
+                                <p class="mb-0">
+                                    <i class="fas fa-envelope"></i>
+                                    support@quickrcare.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Footer Widget -->
+                    
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                
+                    <!-- Footer Widget -->
+                    <div class="footer-widget footer-menu">
+                        <h2 class="footer-title">Quick Links</h2>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Awards And Achievements</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Appointment</a></li>
+                            <li><a href="#">Facilities</a></li>
+                        </ul>
+                    </div>
+                    <!-- /Footer Widget -->
+                    
+                </div>
+                <div class="col-lg-3 col-md-6">
+                
+                    <!-- Footer Widget -->
+                    <div class="footer-widget footer-menu">
+                        <h2 class="footer-title">Service</h2>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><a href="#">Security</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Medical Library</a></li>
+                                    <li><a href="#">Immunizations</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Footer Widget -->
+                    
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                
+                    <!-- Footer Widget -->
+                    <div class="footer-widget footer-menu">
+                        <h2 class="footer-title">For Patients</h2>
+                         <ul>
+                            <li><a [routerLink]="'/login'">Login</a></li>
+                            <li><a [routerLink]="'/Register'">Register</a></li>
+                        </ul>
+                        <p></p>
+                        <h2 class="footer-title">For Providers</h2>
+                        <ul>
+                            <li><a [routerLink]="'/login'">Login</a></li>
+                            <li><a [routerLink]="'/Register'">Register</a></li>
+                            <li><a [routerLink]="'/doctor/dashboard'">Why Join?</a></li>
+                        </ul>
+                    </div>
+                    <!-- /Footer Widget -->
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- /Footer Top -->
+    
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container-fluid">
+        
+            <!-- Copyright -->
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 col-lg-6">
+                        <div class="copyright-text">
+                            <p class="mb-0">&copy; 2021 <span>Quick'rCare INC.</span>. All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                    
+                        <!-- Copyright Menu -->
+                        <div class="copyright-menu">
+                            <ul class="policy-menu">
+                                <li><a [routerLink]="'/terms-conditions'">Terms and Conditions</a></li>
+                                <li><a [routerLink]="'/privacy-policy'">Policy</a></li>
+                            </ul>
+                        </div>
+                        <!-- /Copyright Menu -->
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- /Copyright -->
+            
+        </div>
+    </div>
+    <!-- /Footer Bottom -->
+    
+</footer>
+<!-- /Footer -->
